@@ -1,0 +1,444 @@
+#pragma once
+#include "afxwin.h"
+// CSetupDlg 대화 상자입니다.
+
+class CSetupDlg : public CDialog
+{
+	DECLARE_DYNAMIC(CSetupDlg)
+
+public:
+	CSetupDlg(CWnd* pParent = NULL);   // 표준 생성자입니다.
+	virtual ~CSetupDlg();
+
+// 대화 상자 데이터입니다.
+	enum { IDD = IDD_DIALOG_SETUP };
+
+	typeVerifyImageSelectPara m_ImageSelect[MAX_DEVICE];
+	int m_nDevice_Num;
+	CString m_strFilePath;
+
+	void SetData(typeVerifyImageSelectPara imageSelect, int device);
+	typeVerifyImageSelectPara GetData(int device);
+
+	BOOL SaveData(CString path, int device);
+	BOOL LoadData(CString path, int device);
+
+	void UpdatePara(BOOL _update, int device);
+
+	CBrush m_BrushBlack;
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	void initData();
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	DECLARE_MESSAGE_MAP()
+public:
+	DECLARE_EVENTSINK_MAP()
+	virtual BOOL OnInitDialog();
+	void ClickBtnenhctrlCancel();
+	void ClickBtnenhctrlOk();
+	afx_msg void OnShowWindow(BOOL bShow, UINT nStatus);
+
+	//CAM1
+	int m_nCAM1_0_0;
+	int m_nCAM1_1_0;
+	int m_nCAM1_2_0;
+	int m_nCAM1_3_0;
+	int m_nCAM1_4_0;
+	int m_nCAM1_5_0;
+	int m_nCAM1_6_0;
+	int m_nCAM1_7_0;
+	int m_nCAM1_8_0;
+	int m_nCAM1_9_0;
+	int m_nCAM1_10_0;
+	int m_nCAM1_11_0;
+	int m_nCAM1_12_0;
+	int m_nCAM1_13_0;
+	int m_nCAM1_14_0;
+	int m_nCAM1_15_0;
+	int m_nCAM1_16_0;
+	int m_nCAM1_17_0;
+	int m_nCAM1_18_0;
+	int m_nCAM1_19_0;
+	int m_nCAM1_20_0;
+	int m_nCAM1_21_0;
+	int m_nCAM1_22_0;
+	int m_nCAM1_23_0;
+
+	int m_nCAM1_0_1;
+	int m_nCAM1_1_1;
+	int m_nCAM1_2_1;
+	int m_nCAM1_3_1;
+	int m_nCAM1_4_1;
+	int m_nCAM1_5_1;
+	int m_nCAM1_6_1;
+	int m_nCAM1_7_1;
+	int m_nCAM1_8_1;
+	int m_nCAM1_9_1;
+	int m_nCAM1_10_1;
+	int m_nCAM1_11_1;
+	int m_nCAM1_12_1;
+	int m_nCAM1_13_1;
+	int m_nCAM1_14_1;
+	int m_nCAM1_15_1;
+	int m_nCAM1_16_1;
+	int m_nCAM1_17_1;
+	int m_nCAM1_18_1;
+	int m_nCAM1_19_1;
+	int m_nCAM1_20_1;
+	int m_nCAM1_21_1;
+	int m_nCAM1_22_1;
+
+	int m_nCAM1_0_2;
+	int m_nCAM1_1_2;
+	int m_nCAM1_2_2;
+	int m_nCAM1_3_2;
+	int m_nCAM1_4_2;
+	int m_nCAM1_5_2;
+	int m_nCAM1_6_2;
+	int m_nCAM1_7_2;
+	int m_nCAM1_8_2;
+	int m_nCAM1_9_2;
+	int m_nCAM1_10_2;
+	int m_nCAM1_11_2;
+	int m_nCAM1_12_2;
+	int m_nCAM1_13_2;
+	int m_nCAM1_14_2;
+	int m_nCAM1_15_2;
+	int m_nCAM1_16_2;
+	int m_nCAM1_17_2;
+	int m_nCAM1_18_2;
+	int m_nCAM1_19_2;
+	int m_nCAM1_20_2;
+	int m_nCAM1_21_2;
+	int m_nCAM1_22_2;
+
+	int m_nCAM1_0_3;
+	int m_nCAM1_1_3;
+	int m_nCAM1_2_3;
+	int m_nCAM1_3_3;
+	int m_nCAM1_4_3;
+	int m_nCAM1_5_3;
+	int m_nCAM1_6_3;
+	int m_nCAM1_7_3;
+	int m_nCAM1_8_3;
+	int m_nCAM1_9_3;
+	int m_nCAM1_10_3;
+	int m_nCAM1_11_3;
+	int m_nCAM1_12_3;
+	int m_nCAM1_13_3;
+	int m_nCAM1_14_3;
+	int m_nCAM1_15_3;
+	int m_nCAM1_16_3;
+	int m_nCAM1_17_3;
+	int m_nCAM1_18_3;
+	int m_nCAM1_19_3;
+	int m_nCAM1_20_3;
+	int m_nCAM1_21_3;
+	int m_nCAM1_22_3;
+	int m_nCAM1_23_3;
+
+	//CAM2
+	int m_nCAM2_0_0;
+	int m_nCAM2_1_0;
+	int m_nCAM2_2_0;
+	int m_nCAM2_3_0;
+	int m_nCAM2_4_0;
+	int m_nCAM2_5_0;
+	int m_nCAM2_6_0;
+	int m_nCAM2_7_0;
+	int m_nCAM2_8_0;
+	int m_nCAM2_9_0;
+	int m_nCAM2_10_0;
+	int m_nCAM2_11_0;
+	int m_nCAM2_12_0;
+	int m_nCAM2_13_0;
+	int m_nCAM2_14_0;
+	int m_nCAM2_15_0;
+	int m_nCAM2_16_0;
+	int m_nCAM2_17_0;
+	int m_nCAM2_18_0;
+	int m_nCAM2_19_0;
+	int m_nCAM2_20_0;
+	int m_nCAM2_21_0;
+	int m_nCAM2_22_0;
+	int m_nCAM2_23_0;
+
+	int m_nCAM2_0_1;
+	int m_nCAM2_1_1;
+	int m_nCAM2_2_1;
+	int m_nCAM2_3_1;
+	int m_nCAM2_4_1;
+	int m_nCAM2_5_1;
+	int m_nCAM2_6_1;
+	int m_nCAM2_7_1;
+	int m_nCAM2_8_1;
+	int m_nCAM2_9_1;
+	int m_nCAM2_10_1;
+	int m_nCAM2_11_1;
+	int m_nCAM2_12_1;
+	int m_nCAM2_13_1;
+	int m_nCAM2_14_1;
+	int m_nCAM2_15_1;
+	int m_nCAM2_16_1;
+	int m_nCAM2_17_1;
+	int m_nCAM2_18_1;
+	int m_nCAM2_19_1;
+	int m_nCAM2_20_1;
+	int m_nCAM2_21_1;
+	int m_nCAM2_22_1;
+
+	int m_nCAM2_0_2;
+	int m_nCAM2_1_2;
+	int m_nCAM2_2_2;
+	int m_nCAM2_3_2;
+	int m_nCAM2_4_2;
+	int m_nCAM2_5_2;
+	int m_nCAM2_6_2;
+	int m_nCAM2_7_2;
+	int m_nCAM2_8_2;
+	int m_nCAM2_9_2;
+	int m_nCAM2_10_2;
+	int m_nCAM2_11_2;
+	int m_nCAM2_12_2;
+	int m_nCAM2_13_2;
+	int m_nCAM2_14_2;
+	int m_nCAM2_15_2;
+	int m_nCAM2_16_2;
+	int m_nCAM2_17_2;
+	int m_nCAM2_18_2;
+	int m_nCAM2_19_2;
+	int m_nCAM2_20_2;
+	int m_nCAM2_21_2;
+	int m_nCAM2_22_2;
+
+	int m_nCAM2_0_3;
+	int m_nCAM2_1_3;
+	int m_nCAM2_2_3;
+	int m_nCAM2_3_3;
+	int m_nCAM2_4_3;
+	int m_nCAM2_5_3;
+	int m_nCAM2_6_3;
+	int m_nCAM2_7_3;
+	int m_nCAM2_8_3;
+	int m_nCAM2_9_3;
+	int m_nCAM2_10_3;
+	int m_nCAM2_11_3;
+	int m_nCAM2_12_3;
+	int m_nCAM2_13_3;
+	int m_nCAM2_14_3;
+	int m_nCAM2_15_3;
+	int m_nCAM2_16_3;
+	int m_nCAM2_17_3;
+	int m_nCAM2_18_3;
+	int m_nCAM2_19_3;
+	int m_nCAM2_20_3;
+	int m_nCAM2_21_3;
+	int m_nCAM2_22_3;
+	int m_nCAM2_23_3;
+
+	//CAM3
+	int m_nCAM3_0_0;
+	int m_nCAM3_1_0;
+	int m_nCAM3_2_0;
+	int m_nCAM3_3_0;
+	int m_nCAM3_4_0;
+	int m_nCAM3_5_0;
+	int m_nCAM3_6_0;
+	int m_nCAM3_7_0;
+	int m_nCAM3_8_0;
+	int m_nCAM3_9_0;
+	int m_nCAM3_10_0;
+	int m_nCAM3_11_0;
+	int m_nCAM3_12_0;
+	int m_nCAM3_13_0;
+	int m_nCAM3_14_0;
+	int m_nCAM3_15_0;
+	int m_nCAM3_16_0;
+	int m_nCAM3_17_0;
+	int m_nCAM3_18_0;
+	int m_nCAM3_19_0;
+	int m_nCAM3_20_0;
+	int m_nCAM3_21_0;
+	int m_nCAM3_22_0;
+	int m_nCAM3_23_0;
+
+	int m_nCAM3_0_1;
+	int m_nCAM3_1_1;
+	int m_nCAM3_2_1;
+	int m_nCAM3_3_1;
+	int m_nCAM3_4_1;
+	int m_nCAM3_5_1;
+	int m_nCAM3_6_1;
+	int m_nCAM3_7_1;
+	int m_nCAM3_8_1;
+	int m_nCAM3_9_1;
+	int m_nCAM3_10_1;
+	int m_nCAM3_11_1;
+	int m_nCAM3_12_1;
+	int m_nCAM3_13_1;
+	int m_nCAM3_14_1;
+	int m_nCAM3_15_1;
+	int m_nCAM3_16_1;
+	int m_nCAM3_17_1;
+	int m_nCAM3_18_1;
+	int m_nCAM3_19_1;
+	int m_nCAM3_20_1;
+	int m_nCAM3_21_1;
+	int m_nCAM3_22_1;
+
+	int m_nCAM3_0_2;
+	int m_nCAM3_1_2;
+	int m_nCAM3_2_2;
+	int m_nCAM3_3_2;
+	int m_nCAM3_4_2;
+	int m_nCAM3_5_2;
+	int m_nCAM3_6_2;
+	int m_nCAM3_7_2;
+	int m_nCAM3_8_2;
+	int m_nCAM3_9_2;
+	int m_nCAM3_10_2;
+	int m_nCAM3_11_2;
+	int m_nCAM3_12_2;
+	int m_nCAM3_13_2;
+	int m_nCAM3_14_2;
+	int m_nCAM3_15_2;
+	int m_nCAM3_16_2;
+	int m_nCAM3_17_2;
+	int m_nCAM3_18_2;
+	int m_nCAM3_19_2;
+	int m_nCAM3_20_2;
+	int m_nCAM3_21_2;
+	int m_nCAM3_22_2;
+
+	int m_nCAM3_0_3;
+	int m_nCAM3_1_3;
+	int m_nCAM3_2_3;
+	int m_nCAM3_3_3;
+	int m_nCAM3_4_3;
+	int m_nCAM3_5_3;
+	int m_nCAM3_6_3;
+	int m_nCAM3_7_3;
+	int m_nCAM3_8_3;
+	int m_nCAM3_9_3;
+	int m_nCAM3_10_3;
+	int m_nCAM3_11_3;
+	int m_nCAM3_12_3;
+	int m_nCAM3_13_3;
+	int m_nCAM3_14_3;
+	int m_nCAM3_15_3;
+	int m_nCAM3_16_3;
+	int m_nCAM3_17_3;
+	int m_nCAM3_18_3;
+	int m_nCAM3_19_3;
+	int m_nCAM3_20_3;
+	int m_nCAM3_21_3;
+	int m_nCAM3_22_3;
+	int m_nCAM3_23_3;
+
+	//CAM4
+	int m_nCAM4_0_0;
+	int m_nCAM4_1_0;
+	int m_nCAM4_2_0;
+	int m_nCAM4_3_0;
+	int m_nCAM4_4_0;
+	int m_nCAM4_5_0;
+	int m_nCAM4_6_0;
+	int m_nCAM4_7_0;
+	int m_nCAM4_8_0;
+	int m_nCAM4_9_0;
+	int m_nCAM4_10_0;
+	int m_nCAM4_11_0;
+	int m_nCAM4_12_0;
+	int m_nCAM4_13_0;
+	int m_nCAM4_14_0;
+	int m_nCAM4_15_0;
+	int m_nCAM4_16_0;
+	int m_nCAM4_17_0;
+	int m_nCAM4_18_0;
+	int m_nCAM4_19_0;
+	int m_nCAM4_20_0;
+	int m_nCAM4_21_0;
+	int m_nCAM4_22_0;
+	int m_nCAM4_23_0;
+
+	int m_nCAM4_0_1;
+	int m_nCAM4_1_1;
+	int m_nCAM4_2_1;
+	int m_nCAM4_3_1;
+	int m_nCAM4_4_1;
+	int m_nCAM4_5_1;
+	int m_nCAM4_6_1;
+	int m_nCAM4_7_1;
+	int m_nCAM4_8_1;
+	int m_nCAM4_9_1;
+	int m_nCAM4_10_1;
+	int m_nCAM4_11_1;
+	int m_nCAM4_12_1;
+	int m_nCAM4_13_1;
+	int m_nCAM4_14_1;
+	int m_nCAM4_15_1;
+	int m_nCAM4_16_1;
+	int m_nCAM4_17_1;
+	int m_nCAM4_18_1;
+	int m_nCAM4_19_1;
+	int m_nCAM4_20_1;
+	int m_nCAM4_21_1;
+	int m_nCAM4_22_1;
+
+	int m_nCAM4_0_2;
+	int m_nCAM4_1_2;
+	int m_nCAM4_2_2;
+	int m_nCAM4_3_2;
+	int m_nCAM4_4_2;
+	int m_nCAM4_5_2;
+	int m_nCAM4_6_2;
+	int m_nCAM4_7_2;
+	int m_nCAM4_8_2;
+	int m_nCAM4_9_2;
+	int m_nCAM4_10_2;
+	int m_nCAM4_11_2;
+	int m_nCAM4_12_2;
+	int m_nCAM4_13_2;
+	int m_nCAM4_14_2;
+	int m_nCAM4_15_2;
+	int m_nCAM4_16_2;
+	int m_nCAM4_17_2;
+	int m_nCAM4_18_2;
+	int m_nCAM4_19_2;
+	int m_nCAM4_20_2;
+	int m_nCAM4_21_2;
+	int m_nCAM4_22_2;
+
+	int m_nCAM4_0_3;
+	int m_nCAM4_1_3;
+	int m_nCAM4_2_3;
+	int m_nCAM4_3_3;
+	int m_nCAM4_4_3;
+	int m_nCAM4_5_3;
+	int m_nCAM4_6_3;
+	int m_nCAM4_7_3;
+	int m_nCAM4_8_3;
+	int m_nCAM4_9_3;
+	int m_nCAM4_10_3;
+	int m_nCAM4_11_3;
+	int m_nCAM4_12_3;
+	int m_nCAM4_13_3;
+	int m_nCAM4_14_3;
+	int m_nCAM4_15_3;
+	int m_nCAM4_16_3;
+	int m_nCAM4_17_3;
+	int m_nCAM4_18_3;
+	int m_nCAM4_19_3;
+	int m_nCAM4_20_3;
+	int m_nCAM4_21_3;
+	int m_nCAM4_22_3;
+	int m_nCAM4_23_3;
+
+	double m_edit_nCam1_PixelSize;
+	double m_edit_nCam2_PixelSize;
+	double m_edit_nCam3_PixelSize;
+	double m_edit_nCam4_PixelSize;
+	BOOL m_bServer_Connection;
+	afx_msg void OnBnClickedCheckServer();
+};
